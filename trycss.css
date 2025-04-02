@@ -1,0 +1,657 @@
+body{
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+}
+
+h1, h3{
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+a{
+  color: #f1f1f1;
+}
+
+a{
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #ccc;
+}
+
+p{
+  font-size: 0.9em;
+  color: #a3a3a3;
+  line-height: 1.6em;
+}
+
+section{
+  padding: 4em 2em;
+  margin: 3em 0;
+}
+
+.container{
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.logo{
+  filter: drop-shadow(5px 5px 5px #111);
+  font-size: 7px;
+}
+
+.menu{
+  font-size: 18px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+nav{
+  z-index: 99;
+  position: relative;
+  width:100%;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 80px;
+  gap:40px;
+}
+
+@media (max-width:823px){
+  nav ul{
+    display:none;
+  }
+}
+
+.smallMenuButton{
+  width:60px;
+  height:60px;
+  position: relative;
+  background-color: white;
+  display:none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.smallMenuButton img{
+  width:50%;
+}
+
+.smallMenu{
+  width:150px;
+  height:200px;
+  text-align: center;
+  background-color: white;
+  display:none;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  z-index: 999;
+  bottom: -195px;
+  left:0;
+}
+
+.smallMenu a{
+  color:hsl(0, 0%, 51%);
+}
+
+.smallMenuButton:hover .smallMenu{
+  display:flex;
+}
+
+@media (max-width:823px){
+  .smallMenuButton{
+    display: flex;
+    margin-left: 10px;
+  }
+
+  .menu{
+    justify-content: space-between;
+  }
+}
+
+
+nav ul a{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+nav .logo{
+  width: 150px;
+  filter: drop-shadow(5px 5px 5px #ccc);
+  margin-right: 20px;
+}
+
+nav .container .menu-btn{
+  display: none;
+}
+
+.navigation{
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.navigation:hover{
+  color: #ccc;
+  border: 1px solid white;
+  padding: 5px 5px 5px 5px;
+  border-radius: 10px;
+}
+ 
+ .noHover{
+   pointer-events: none;
+} 
+
+.generaltxt{
+  margin-bottom: 40px;
+  
+}
+
+.generaltxt h1{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #00467f;
+}
+
+.buttn{
+  padding: 0.7em 1.5em;
+  border-radius: 2em;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  margin: 1em 0;
+  display: inline-block;
+  background-color: #00ac9d;
+  margin-left: 3.5em;
+}
+
+
+header{
+  height: 100vh;
+  background: url(background-min.png) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.toBoeing{
+  width:130px;
+  height:40px;
+  background-color: white;
+  color:#00467f;
+  position: absolute;
+  bottom:30px;
+  right:50px;
+  border:none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.toBoeing:hover {
+  background-color: hsl(0, 0%, 81%);
+  color:#00ac9d;
+  transform: scale(1.1);
+}
+
+.toAirbus{
+  width:130px;
+  height:40px;
+  background-color: white;
+  color:#00467f;
+  position: absolute;
+  bottom:30px;
+  right:50px;
+  border:none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.toAirbus:hover {
+  background-color: hsl(0, 0%, 81%);
+  color:#00ac9d;
+  transform: scale(1.1);
+}
+
+#planesPage{
+  height: 100vh;
+  background:rgba(0, 0, 0, 0.5) url(Airbus\ Family.png) center no-repeat;
+  background-size: cover;
+  position: relative;
+  background-blend-mode: darken;
+}
+
+@media (max-width:500px){
+  #maintext{
+    font-size: 1.5em;
+    color: white;
+  }
+}
+
+header::before, header::after{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+header::before{
+  width: 100%;
+  background: url(clouds-min.png) center no-repeat;
+  background-size: cover;
+}
+
+header::after{
+  background: linear-gradient(90deg, #f1f1f1 0%, rgba(255, 255, 255, 0) 100%);
+  width: 50%;
+}
+
+header .content{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 3em;
+  height: 80%;
+  max-width: 500px;
+  margin-top: -2em;
+}
+
+header .plane{
+  width: 60%;
+  max-width: 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  top: 20%;
+  z-index: 0;
+  animation-delay: 500ms;
+}
+
+header h1{
+  font-size: 2.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  color: #ffffff;
+}
+
+header h1 span{
+  font-size: 1.1em;
+  color: #00ac9d;
+}
+
+header p{
+  max-width: 400px;
+}
+
+.btn{
+  padding: 0.7em 1.5em;
+  border-radius: 2em;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  margin: 1em 0;
+  display: inline-block;
+}
+
+.btn-primary{
+  background-color: #00ac9d;
+  margin-left: 0.3em;
+}
+
+.btn-primary:hover{
+  background-color: #009c8e;
+}
+
+.btn-secondary{
+  border: 2px color( #00467f) solid;
+  color: #00467f;
+}
+
+.btn-secondary:hover {
+  background-color: #00467f;
+  color: #fff;
+} 
+
+.heading{
+  text-align: center;
+  padding: 5em 3em;
+  font-size: 15px;
+}
+
+.heading h1{
+  position: relative;
+  color: #00467f;
+  font-size: 2.5em;
+}
+
+.heading h1 span{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  color: #e3e3e3;
+  z-index: -1;
+  width: 100%;
+}
+
+@media(max-width:882px){
+  .heading{
+    padding: 3em 1em;
+  }
+  .heading h1 span{
+    font-size: 1.5em;
+  }
+
+  .heading h1{
+    font-size: 1.5em;
+  }
+}
+
+.about{
+  margin: auto;
+  position: relative;
+}
+
+.card{
+  width: 39em;
+  margin: 5em auto;
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-text .btn{
+  border-color: #fff;
+  color: #fff;
+  margin: 0;
+}
+
+.card-text .btn:hover{
+  background-color: #fff;
+  color: #00ac9d;
+}
+
+.card-text{
+  background-color: #00ac9d;
+  padding: 2em;
+  box-sizing: border-box;
+  width: 50%;
+  min-height: 110%;
+  position: absolute;
+  right: 0em;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.card-text p, .card-text h1{
+  color: #f1f1f1;
+}
+
+.card-text p{
+  margin-bottom: 2em;
+}
+
+.aboutSwiper .swiper-slide{
+  position: relative;
+  display: flex;
+  justify-content: center;
+} 
+
+@media(max-width:550px){
+  .card-text{
+    width:100%;
+    transform: translateY(50px);
+  }
+  .aboutSwiper .swiper-slide{
+    margin-bottom: 12em;
+  }
+
+}
+
+@media(max-width:500px){
+  .card img{
+    width:85%;
+  }
+}
+
+.planeSwiper img{
+  width: 60%;
+  max-width: 900px;
+  filter: drop-shadow(10px 10px 15px #ccc);
+}
+
+.slide-num{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #e3e3e3;
+  font-size: 18em;
+  z-index: 0;
+} 
+
+.services .container{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.serice{
+  max-width: 20em;
+  margin: 2em;
+}
+
+.services .fas{
+  color: #00ac9d; 
+}
+
+.buttncontacts{
+  padding: 0.7em 1.5em;
+  border-radius: 2em;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  margin: 1em 0;
+  display: inline-block;
+  background-color: #00ac9d;
+  font-size: 20px;
+}
+
+.buttncontacts:hover{
+  font-size: 23px
+}
+
+footer{
+  background-color: #081a29;
+  margin-top: 5em;
+}
+
+footer .footer{
+  display:flex;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:40px;
+  padding: 70px 0;
+}
+
+footer .logo2{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  width: 8em;
+}
+
+footer .logo2:hover{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  width: 10em;
+}
+
+footer .footer ul{
+  padding: 0;
+  list-style-type: none;
+  margin: 3em;
+}
+
+ footer .main-link a{
+background-position: bottom left;
+background-repeat: no-repeat;
+background-size: 40% 0.3em;
+padding: 0.3em 0;
+transition: 300ms ease;
+font-weight: 700;
+font-size: 1.5em;
+}  
+
+footer .main-link{
+  margin: 1em 0;
+}
+
+.copyright{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+/*Карти със самолетите*/
+.planeCard{
+  width: 39em;
+  margin: 5em 0;
+  position: relative;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  background-color: #00ac9d;
+}
+
+
+.planeCard img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.planeCard-text .btn{
+  border-color: #fff;
+  color: #fff;
+  margin: 0;
+}
+
+.planeCard-text .btn:hover{
+  background-color: #fff;
+  color: #00ac9d;
+}
+
+.planeCard-text{
+  background-color: #00ac9d;
+  padding: 2em;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 5%;
+  position: absolute;
+  bottom: -70px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); 
+}
+
+.planeCard-text p, .planeCard-text h1{
+  color: #f1f1f1;
+}
+
+.planeCard-text p{
+  margin-bottom: 2em;
+}
+
+@media (max-width:640px){
+  .planeCard{
+    width:90%;
+    padding-bottom: 1.3rem;
+  }
+
+  .planeCard-text{
+    bottom: -130px;
+  }
+
+  .Boeing{
+    margin-top: 80px;
+  }
+}
+
+.Boeing {
+  height: 105vh;
+  position: relative;
+  text-align: center;
+}
+
+.Boeing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  z-index: 1; 
+  filter: drop-shadow(5px 10px 5px #b2b2b2);
+}
+
+.center:hover{
+  font-size: 55px;
+}
+
+.role{
+display: flex;
+gap: 30px;
+flex-wrap: wrap;
+justify-content: center;
+}
+
